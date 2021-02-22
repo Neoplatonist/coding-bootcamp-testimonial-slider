@@ -17,6 +17,7 @@
     <style>
         :root {
             --dark-blue: hsl(240, 38%, 20%);
+            --dark-blue-shadow: hsla(240, 38%, 20%, 0.3);
             --gray-blue: hsl(240, 18%, 77%);
         }
 
@@ -66,7 +67,7 @@
             margin: 53px;
             overflow: hidden;
             border-radius: 5px;
-            box-shadow: 0px 40px 50px -20px hsla(240, 38%, 20%, 0.3);
+            box-shadow: 0px 40px 50px -20px var(--dark-blue-shadow);
         }
 
         .slider-image>img {
