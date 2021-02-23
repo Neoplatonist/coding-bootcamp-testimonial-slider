@@ -38,8 +38,7 @@
         }
 
         .slider {
-            height: 100%;
-            width: 100%;
+            height: 100vh;
             background-image: url('images/pattern-bg.svg');
             background-position: left 6.5vw top 3.6vh;
             background-size: 87.2%;
@@ -106,7 +105,7 @@
 
         .slider-testimony {
             width: 85%;
-            margin-top: 40px;
+            margin: 40px auto 0 auto;
             padding-top: 27px;
             background-image: url('images/pattern-quotes.svg');
             background-position: left 35vw top 0vh;
@@ -153,6 +152,84 @@
             color: hsl(228, 45%, 44%);
         }
 
+        @media screen and (min-width: 1439px) {
+            .slider {
+                background-position: right 5.1vw top 6.6vh;
+                background-size: 48.2%;
+                flex-direction: row-reverse;
+            }
+
+            .slider::before {
+                background-position: left -1vw bottom -1.6vh;
+                background-size: 46%;
+            }
+
+            .slider-profile {
+                height: 100%;
+                position: relative;
+            }
+
+            .slider-image {
+                height: 540px;
+                width: 540px;
+                position: absolute;
+                top: 7.6%;
+                right: 7.8vw;
+            }
+
+            .slider-btns {
+                position: absolute;
+                bottom: 15vh;
+                right: 37vw;
+            }
+
+            .slider-prev {
+                padding: 18px 23px 18px 20px;
+            }
+
+            .slider-next {
+                padding: 18px 20px 18px 23px;
+            }
+
+            .slider-info {
+                width: 50vw;
+                margin-left: 9vw;
+                margin-right: auto;
+                overflow: visible;
+            }
+
+            .slider-testimony {
+                width: 90%;
+                margin: -30px auto 0 auto;
+                padding-top: 65px;
+                position: relative;
+                z-index: 1;
+                background-image: url('images/pattern-quotes.svg');
+                background-position: left 6.5vw top 0vh;
+                background-size: 18.6%;
+                font-size: 3.2rem;
+                line-height: 1.4;
+                text-align: left;
+            }
+
+            .slider-caption {
+                width: 90%;
+                margin: 40px auto 0 auto;
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+            }
+
+            .slider-caption-cite {
+                font-size: 2rem;
+                letter-spacing: 0.4px;
+            }
+
+            .slider-caption-role {
+                margin-left: 0.8rem;
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 
@@ -175,16 +252,18 @@
             </div>
         </section>
 
-        <blockquote class="slider-testimony">
-            “ I’ve been interested in coding for a while but never taken the jump, until now.
-            I couldn’t recommend this course enough. I’m now in the job of my dreams and so
-            excited about the future. ”
-        </blockquote>
+        <section class="slider-info">
+            <blockquote class="slider-testimony">
+                “ I’ve been interested in coding for a while but never taken the jump, until now.
+                I couldn’t recommend this course enough. I’m now in the job of my dreams and so
+                excited about the future. ”
+            </blockquote>
 
-        <figcaption class="slider-caption">
-            <cite class="slider-caption-cite">Tanya Sinclair</cite>
-            <p class="slider-caption-role">UX Engineer</p>
-        </figcaption>
+            <figcaption class="slider-caption">
+                <cite class="slider-caption-cite">Tanya Sinclair</cite>
+                <p class="slider-caption-role">UX Engineer</p>
+            </figcaption>
+        </section>
     </figure>
 
     <div class="attribution">
@@ -196,7 +275,7 @@
         const data = [
             {
                 img: "images/image-tanya.jpg",
-                testimony: "I’ve been interested in coding for a while but never taken the jump, until now.I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future.",
+                testimony: "I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future.",
                 cite: "Tanya Sinclair",
                 role: "UX Engineer"
             },
